@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentes de IA</title>
+    <meta name="description" content="Agentes de IA para redação, investigação e notícias tecnológicas">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+            background: radial-gradient(circle at center, rgba(255, 0, 153, 0.3), transparent 70%),
+                        radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.2), transparent 70%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 255, 0, 0.15), transparent 70%),
+                        #0e0b16;
+            background-blend-mode: screen;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ff0099;
+            text-shadow: 0 0 3px #ff0099, 0 0 5px #ff0099, 0 0 8px rgba(255, 0, 153, 0.8);
+        }
+        .agent-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            width: 100%;
+            max-width: 800px;
+        }
+        .agent-card {
+            background-color: #1c1c28;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.15);
+        }
+        .agent-card:hover {
+            background-color: #292945;
+            transform: scale(1.03);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+        .agent-content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        .agent-logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #333;
+            margin-right: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+        }
+        .agent-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .agent-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            max-width: 550px;
+        }
+        .agent-name {
+            font-size: 1.3em;
+            color: #ff0099;
+            margin-bottom: 5px;
+            text-shadow: 0 0 2px #ff0099, 0 0 4px rgba(255, 0, 153, 0.7);
+        }
+        .agent-description {
+            font-size: 1em;
+            color: #a6a6a6;
+            margin: 0;
+        }
+        /* Responsivo para telas menores */
+        @media (max-width: 600px) {
+            .agent-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Agentes de IA</h1>
+    </header>
+
+    <section class="agent-container">
+        <!-- Agente 1 -->
+        <article class="agent-card" data-url="https://chatgpt.com/g/g-54jASsOv6-especialista-android" onclick="window.open(this.dataset.url, '_blank', 'noopener')">
+            <div class="agent-content">
+                <div class="agent-logo">
+                    <img src="https://t2.tudocdn.net/71528?w=1920" alt="Logo Especialista Android" width="70" height="70">
+                </div>
+                <div class="agent-info">
+                    <div class="agent-name">Especialista Android</div>
+                    <div class="agent-description">Especialista em Android, ajuda com desenvolvimento, otimização e dúvidas gerais.</div>
+                </div>
+            </div>
+        </article>       
+
+         <!-- Agente 2 -->
+        <article class="agent-card" data-url="https://chatgpt.com/g/g-675750451a6081918d3431e2452cd3eb-especialista-em-resumos" onclick="window.open(this.dataset.url, '_blank', 'noopener')">
+            <div class="agent-content">
+                <div class="agent-logo">
+                    <img src="https://files.tecnoblog.net/wp-content/uploads/2016/04/caderno_caneta.jpg" alt="Logo Construtor de Prompt" width="70" height="70">
+                </div>
+                <div class="agent-info">
+                    <div class="agent-name">Especialista em Resumos</div>
+                    <div class="agent-description">Especialista em resumos em tópicos.</div>
+                </div>
+            </div>
+        </article>         
+    </section>
+
+</body>
+</html>
